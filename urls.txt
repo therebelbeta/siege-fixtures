@@ -1,0 +1,144 @@
+# comments behind hashes
+http://192.168.99.100:8000/get
+
+http://192.168.99.100:8000/post
+
+http://192.168.99.100:8000/ip
+# Returns Origin IP.
+http://192.168.99.100:8000/user-agent
+# Returns user-agent.
+http://192.168.99.100:8000/headers
+# Returns header dict.
+http://192.168.99.100:8000/get
+# Returns GET data.
+http://192.168.99.100:8000/get?foo=bar
+# Returns GET data.
+http://192.168.99.100:8000/post POST foo=bar&foo2=bar2
+# Returns POST data.
+
+
+http://192.168.99.100:8000/encoding/utf8
+# Returns page containing UTF-8 data.
+http://192.168.99.100:8000/gzip
+# Returns gzip-encoded data.
+http://192.168.99.100:8000/deflate
+# Returns deflate-encoded data.
+
+# status codes here
+http://192.168.99.100:8000/status/100
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/101
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/102
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/200
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/201
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/202
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/204
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/300
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/301
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/302
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/304
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/400
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/401
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/402
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/404
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/405
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/406
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/407
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/408
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/418
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/500
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/501
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/502
+# Returns given HTTP Status code.
+http://192.168.99.100:8000/status/504
+# Returns given HTTP Status code.
+
+http://192.168.99.100:8000/response-headers?foo=bar
+# Returns given response headers.
+http://192.168.99.100:8000/redirect/3
+# 302 Redirects n times.
+http://192.168.99.100:8000/redirect-to?url=google.com
+# 302 Redirects to the foo URL.
+http://192.168.99.100:8000/relative-redirect/3
+# 302 Relative redirects n times.
+http://192.168.99.100:8000/absolute-redirect/3
+# 302 Absolute redirects n times.
+http://192.168.99.100:8000/cookies
+# Returns cookie data.
+http://192.168.99.100:8000/cookies/set?name=value
+# Sets one or more simple cookies.
+http://192.168.99.100:8000/cookies/delete?name
+# Deletes one or more simple cookies.
+http://192.168.99.100:8000/basic-auth/user/passwd
+# Challenges HTTPBasic Auth.
+http://192.168.99.100:8000/hidden-basic-auth/user/passwd
+# 404'd BasicAuth.
+http://192.168.99.100:8000/digest-auth/qop/user/passwd
+# Challenges HTTP Digest Auth.
+http://192.168.99.100:8000/basic-auth/user/null
+# Challenges HTTPBasic Auth.
+http://192.168.99.100:8000/hidden-basic-auth/user/null
+# 404'd BasicAuth.
+http://192.168.99.100:8000/digest-auth/qop/user/null
+# Challenges HTTP Digest Auth.
+http://192.168.99.100:8000/stream/50
+# Streams min(n, 100) lines.
+http://192.168.99.100:8000/delay/5
+# Delays responding for min(n, 10) seconds.
+http://192.168.99.100:8000/drip?numbytes=100&duration=3&delay=2&code=207
+# Drips data over a duration after an optional initial delay, then (optionally) returns with the given status code.
+http://192.168.99.100:8000/range/1024?duration=3
+# Streams n bytes, and allows specifying a Range header to select a subset of the data. Accepts a chunk_size and request duration parameter.
+http://192.168.99.100:8000/html
+# Renders an HTML Page.
+http://192.168.99.100:8000/robots.txt
+# Returns some robots.txt rules.
+http://192.168.99.100:8000/deny
+# Denied by robots.txt file.
+http://192.168.99.100:8000/cache
+# Returns 200 unless an If-Modified-Since or If-None-Match header is provided, when it returns a 304.
+http://192.168.99.100:8000/cache/3
+# Sets a Cache-Control header for n seconds.
+http://192.168.99.100:8000/bytes/100
+# Generates n random bytes of binary data, accepts optional seed integer parameter.
+http://192.168.99.100:8000/stream-bytes/100
+# Streams n random bytes of binary data, accepts optional seed and chunk_size integer parameters.
+http://192.168.99.100:8000/links/25
+# Returns page containing n HTML links.
+http://192.168.99.100:8000/image
+# Returns page containing an image based on sent Accept header.
+http://192.168.99.100:8000/image/png
+# Returns page containing a PNG image.
+http://192.168.99.100:8000/image/jpeg
+# Returns page containing a JPEG image.
+http://192.168.99.100:8000/image/webp
+# Returns page containing a WEBP image.
+http://192.168.99.100:8000/image/svg
+# Returns page containing a SVG image.
+http://192.168.99.100:8000/forms/post
+# HTML form that submits to /post
+http://192.168.99.100:8000/xml
+# Returns some XML
+
+# and on and on....
