@@ -1,0 +1,144 @@
+# comments behind hashes
+http://localhost:8888/get
+
+http://localhost:8888/post
+
+http://localhost:8888/ip
+# Returns Origin IP.
+http://localhost:8888/user-agent
+# Returns user-agent.
+http://localhost:8888/headers
+# Returns header dict.
+http://localhost:8888/get
+# Returns GET data.
+http://localhost:8888/get?foo=bar
+# Returns GET data.
+http://localhost:8888/post POST foo=bar&foo2=bar2
+# Returns POST data.
+
+
+http://localhost:8888/encoding/utf8
+# Returns page containing UTF-8 data.
+http://localhost:8888/gzip
+# Returns gzip-encoded data.
+http://localhost:8888/deflate
+# Returns deflate-encoded data.
+
+# status codes here
+http://localhost:8888/status/100
+# Returns given HTTP Status code.
+http://localhost:8888/status/101
+# Returns given HTTP Status code.
+http://localhost:8888/status/102
+# Returns given HTTP Status code.
+http://localhost:8888/status/200
+# Returns given HTTP Status code.
+http://localhost:8888/status/201
+# Returns given HTTP Status code.
+http://localhost:8888/status/202
+# Returns given HTTP Status code.
+http://localhost:8888/status/204
+# Returns given HTTP Status code.
+http://localhost:8888/status/300
+# Returns given HTTP Status code.
+http://localhost:8888/status/301
+# Returns given HTTP Status code.
+http://localhost:8888/status/302
+# Returns given HTTP Status code.
+http://localhost:8888/status/304
+# Returns given HTTP Status code.
+http://localhost:8888/status/400
+# Returns given HTTP Status code.
+http://localhost:8888/status/401
+# Returns given HTTP Status code.
+http://localhost:8888/status/402
+# Returns given HTTP Status code.
+http://localhost:8888/status/404
+# Returns given HTTP Status code.
+http://localhost:8888/status/405
+# Returns given HTTP Status code.
+http://localhost:8888/status/406
+# Returns given HTTP Status code.
+http://localhost:8888/status/407
+# Returns given HTTP Status code.
+http://localhost:8888/status/408
+# Returns given HTTP Status code.
+http://localhost:8888/status/418
+# Returns given HTTP Status code.
+http://localhost:8888/status/500
+# Returns given HTTP Status code.
+http://localhost:8888/status/501
+# Returns given HTTP Status code.
+http://localhost:8888/status/502
+# Returns given HTTP Status code.
+http://localhost:8888/status/504
+# Returns given HTTP Status code.
+
+http://localhost:8888/response-headers?foo=bar
+# Returns given response headers.
+http://localhost:8888/redirect/3
+# 302 Redirects n times.
+http://localhost:8888/redirect-to?url=google.com
+# 302 Redirects to the foo URL.
+http://localhost:8888/relative-redirect/3
+# 302 Relative redirects n times.
+http://localhost:8888/absolute-redirect/3
+# 302 Absolute redirects n times.
+http://localhost:8888/cookies
+# Returns cookie data.
+http://localhost:8888/cookies/set?name=value
+# Sets one or more simple cookies.
+http://localhost:8888/cookies/delete?name
+# Deletes one or more simple cookies.
+http://localhost:8888/basic-auth/user/passwd
+# Challenges HTTPBasic Auth.
+http://localhost:8888/hidden-basic-auth/user/passwd
+# 404'd BasicAuth.
+http://localhost:8888/digest-auth/qop/user/passwd
+# Challenges HTTP Digest Auth.
+http://localhost:8888/basic-auth/user/null
+# Challenges HTTPBasic Auth.
+http://localhost:8888/hidden-basic-auth/user/null
+# 404'd BasicAuth.
+http://localhost:8888/digest-auth/qop/user/null
+# Challenges HTTP Digest Auth.
+http://localhost:8888/stream/50
+# Streams min(n, 100) lines.
+http://localhost:8888/delay/5
+# Delays responding for min(n, 10) seconds.
+http://localhost:8888/drip?numbytes=100&duration=3&delay=2&code=207
+# Drips data over a duration after an optional initial delay, then (optionally) returns with the given status code.
+http://localhost:8888/range/1024?duration=3
+# Streams n bytes, and allows specifying a Range header to select a subset of the data. Accepts a chunk_size and request duration parameter.
+http://localhost:8888/html
+# Renders an HTML Page.
+http://localhost:8888/robots.txt
+# Returns some robots.txt rules.
+http://localhost:8888/deny
+# Denied by robots.txt file.
+http://localhost:8888/cache
+# Returns 200 unless an If-Modified-Since or If-None-Match header is provided, when it returns a 304.
+http://localhost:8888/cache/3
+# Sets a Cache-Control header for n seconds.
+http://localhost:8888/bytes/100
+# Generates n random bytes of binary data, accepts optional seed integer parameter.
+http://localhost:8888/stream-bytes/100
+# Streams n random bytes of binary data, accepts optional seed and chunk_size integer parameters.
+http://localhost:8888/links/25
+# Returns page containing n HTML links.
+http://localhost:8888/image
+# Returns page containing an image based on sent Accept header.
+http://localhost:8888/image/png
+# Returns page containing a PNG image.
+http://localhost:8888/image/jpeg
+# Returns page containing a JPEG image.
+http://localhost:8888/image/webp
+# Returns page containing a WEBP image.
+http://localhost:8888/image/svg
+# Returns page containing a SVG image.
+http://localhost:8888/forms/post
+# HTML form that submits to /post
+http://localhost:8888/xml
+# Returns some XML
+
+# and on and on....
